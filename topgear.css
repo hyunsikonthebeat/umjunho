@@ -67,3 +67,32 @@ footer {
 .right-section {
     margin-right: 20px;
   }
+#header_news li
+{
+    font-family:monospace,monaco,sans-serif;
+    display: inline-block;
+    position:relative;
+    top:10px;
+    left:150px;
+}
+#header_news li a
+{
+    display:block;
+    position:relative;
+    padding-bottom:20px;
+    margin:100px;
+}
+#header_news li a img
+{
+    height:200px;
+}
+#header_news li a span
+{
+    position:absolute; 
+    bottom:0; 
+    left:50%; 
+    color:#666; 
+    line-height:1.462em;
+    white-space:nowrap; 
+    transform:translate(-50%, 0)
+}
