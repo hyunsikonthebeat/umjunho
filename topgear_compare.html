@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOTORTREND</title>
+  <link rel="stylesheet" href="topgear.css">
+    <style>
+        .login-section 
+        {
+          display: inline-flex;
+          align-items: center;
+          margin-left: auto;
+        }
+        
+        .login-input 
+        {
+          margin-right: 10px;
+        }
+        
+        .login-button 
+        {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+    </style>
+    <script>
+        function compareCars() {
+        var selectedCar = document.getElementById("carDropdown").value;
+        var comparisonImages = document.getElementById("comparisonImages");
+
+        // Clear previous images
+        comparisonImages.innerHTML = "";
+
+        if (selectedCar !== "") {
+        var carImages = {
+            "제네시스 G90": "//g90com.png",
+            "벤츠 S클래스": "//sclass.png",
+            "아우디 A8": "//audi.png"
+        };
+
+        var cars = Object.keys(carImages);
+
+        for (var i = 0; i < cars.length; i++) {
+            var car = cars[i];
+
+            if (car === selectedCar) {
+            continue; 
+            }
+
+            var image = document.createElement("img");
+            image.src = carImages[car];
+            image.alt = car;
+
+            comparisonImages.appendChild(image);
+        }
+        }
+    }
+</script> 
+</head>
+<body>
+  <header>
+    <h1>MOTORTREND</h1>
+  </header>
+  <nav>
+    <ul>
+        <li><a href="topgear.html">HOME</a></li>
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+        <li></li>
+        <li><a href="topgear_compare.html">차량비교</a></li>
+        <li><a href="topgear_info.html">정보</a></li>
+        <li></li><li></li><li></li>
+        <li class="login-section">
+          <input type="text" class="login-input" placeholder="아이디">
+          <input type="password" class="login-input" placeholder="비밀번호">
+          <button class="login-button">로그인</button>
+        </li>
+    </ul>
+  </nav>
+  </div>
+  <div class="dropdown">
+    <select id="carDropdown">
+        <option value="">차량 선택</option>
+        <option value="제네시스 G90">제네시스 G90</option>
+        <option value="벤츠 S클래스">벤츠 S클래스</option>
+        <option value="아우디 A8">아우디 A8</option>
+    </select>
+    <select id="carDropdown">
+      <option value="">차량 선택</option>
+      <option value="제네시스 G90">제네시스 G90</option>
+      <option value="벤츠 S클래스">벤츠 S클래스</option>
+      <option value="아우디 A8">아우디 A8</option>
+    </select>
+    <button>비교</button>
+  </div>
+  <div id="comparisonImages"></div>
+  <script src="topgear.css"></script>
+</body>
+</html>

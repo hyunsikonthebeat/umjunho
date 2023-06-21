@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOTORTREND</title>
+  <link rel="stylesheet" href="topgear.css">
+    <style>
+        .slideshow-container 
+        {
+            max-width: 1120px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides 
+        {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: auto;
+        }
+        .slideshow-container::before 
+        {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.5); /* 원하는 색상 및 투명도 설정 */
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slideshow-container img.active 
+        {
+            opacity: 1;
+        }
+
+        .slideshow-container::before.active 
+        {
+            opacity: 1;
+        }
+        .login-section 
+        {
+          display: inline-flex;
+          align-items: center;
+          margin-left: auto;
+        }
+        
+        .login-input 
+        {
+          margin-right: 10px;
+        }
+        
+        .login-button 
+        {
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          padding: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin-left: 10px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>MOTORTREND</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="topgear.html">HOME</a></li>
+      <li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+      <li></li>
+      <li><a href="topgear_compare.html">차량비교</a></li>
+      <li><a href="topgear_info.html">정보</a></li>
+      <li></li><li></li><li></li>
+      <li class="login-section">
+        <input type="text" class="login-input" placeholder="아이디">
+        <input type="password" class="login-input" placeholder="비밀번호">
+        <button class="login-button">로그인</button>
+      </li>
+    </ul>
+  </nav>
+  <div style="padding:10px;"> 
+  </div>
+  <div class="slideshow-container">
+      <img class="mySlides" src="gt4.jpeg">
+      <img class="mySlides" src="g90.jpeg">
+      <img class="mySlides" src="mini.jpeg">
+      <img class="mySlides" src="ev9.jpeg">
+  </div>
+
+  <div style="padding:10px;"> 
+  </div>
+  <footer>
+    <div class="footer-bar">
+      <div class="left-section">
+        <span>©20221118 엄준호</span>
+      </div>
+      <div class="right-section">
+        <span>이메일</span>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        // 이미지 슬라이드 쇼를 위한 JavaScript 코드
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() 
+        {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+
+            // 모든 슬라이드를 숨김
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // 다음 슬라이드를 보여줌
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+</body>
+</html>
